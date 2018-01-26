@@ -1,0 +1,20 @@
+extends profilelayout
+
+block content
+ p #[em #{note}]
+  
+ h1 #Post #{post.id}
+ h5 posted by #{post.email}
+
+ p1 message:  #{post.user_post}
+ br
+ p2 hide:     #{post.hide}
+ 
+ br
+
+ form(method='POST' action='')
+  input(type='hidden', name='id', value=post.id)
+  br
+  button.btn.btn-primary(type='submit') Delete Post
+
+  

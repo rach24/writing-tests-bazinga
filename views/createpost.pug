@@ -1,0 +1,22 @@
+extends profilelayout
+
+block content
+ h4 #{message}
+ form(method='POST' action='')
+    div(class='view1')
+     h3 Create your post
+     textarea(rows='5',cols='40' placeholder=' Enter your post.',required='true', name='user_post')
+     br
+    div.form-group
+      div.control-group
+        label.control-label Hide from other
+        div.controls
+          label.radio.inline
+           input(type="radio", name="hide", id="optionsRadios1", value="Yes", checked="")
+           label Yes
+          label.radio.inline 
+           input(type="radio", name="hide", id="optionsRadios2", value="No")
+           label No 
+ 
+    br
+    button.btn.btn-primary(type='submit') Create Post

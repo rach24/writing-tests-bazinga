@@ -1,0 +1,17 @@
+extends profilelayout
+
+block content
+ h1 #{title}
+
+ ul
+ each post in post_list
+  li
+   a(href='viewposts/detail/'+post._id) #{post.url}
+   |   posted by (#{post.email})
+
+ else
+  li There are no posts.
+
+ p #[em #{note}]
+
+

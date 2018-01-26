@@ -1,0 +1,29 @@
+extends profilelayout
+
+block content
+  div(class='col-sm-10')
+    h3 Edit Your Profile
+    h5 These are a few additional fields to boost your profile. You can keep updating these as you seem fit.
+    form(method='POST' action='/profile')
+      div.form-group
+        label(for='uni') University:
+        input#uni.form-control(type='text', placeholder='[UIUC],[UIC],[UIS]', name='uni')
+      br
+      div.form-group
+        label(for='ph') Phone Number:
+        input#ph.form-control(type='text', name='ph')
+      br
+      div.form-group
+       label(for='addr') Address:
+       input#addr.form-control(type='textarea', name='addr')
+      br
+      div.form-group
+       label(for='status') Status:
+       input#status.form-control(type='textarea', name='status')
+      br
+      button.btn.btn-primary(type='submit') Update the changes made
+
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

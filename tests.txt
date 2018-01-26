@@ -1,0 +1,23 @@
+Feature 1 : Allows visitors to register a new account with some basic user information which is visible on a user profile page.
+            test of successful functionality : When a user logs in with his credentials after registering, the messgage "You have logged in using {user email}" is displayed on homepage.
+            test of disallowed functionality : When a user tries to register with an existing email id, he should not be allowed to do so.
+
+Feature 2: Allows users to edit their own profile
+            test of successful functionality : If user edits university, then the new value should be reflected on the user's profile
+            test of disallowed functionality : User cannot edit someone else's profile
+
+Feature 3: Allows users to create new “posts” which each have their own unique URL.
+            test of successful functionality : When user creates a post the message "Post is successful. want to do another?" is shown.
+            test of disallowed functionality : Empty post is not allowed to be created.
+
+Feature 4: Allows users to restrict their post visibility beyond “all visitors to the web app”
+            test of successful functionality : When user creates a post with option hide checked, The post information sent to user shows that message has hide turned on.
+            test of disallowed functionality : When user creates a post with option hide unchecked, The post information sent to user shows that message should not have hide turned on.
+
+Feature 5: Allows users to view posts by other users according to visibility rules : When user deleted a post, it should not be listed on all post's page
+            test of successful functionality : An authorised user should be able to view a post details by clicking on the post link.
+            test of disallowed functionality : An unauthorised user sould not be able to view a post that has visibilty restricted to Website users.
+
+Feature 6: Allows users to delete their own posts : User cannot delete another's post
+            test of successful functionality : When user deletes a post, the post should not be present in the all posts list.
+            test of disallowed functionality : User should not be able to delete another user's posts
